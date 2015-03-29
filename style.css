@@ -1,0 +1,146 @@
+body{
+	font-family: "Ubuntu";
+	background: url(images/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+canvas{
+	color: white;
+	display: block;
+	margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;   
+    border: 8px solid #ddd;    
+    border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}	
+.right{
+	float: right;
+}
+/*==============================Buttons=================================*/
+
+.buttonGroup{
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto; 
+	width: 800px;
+	padding: 10px 0;
+	background: #ddd;
+	border-left: 8px solid #ddd;
+	border-right: 8px solid #ddd;
+	border-bottom: 8px solid #ddd;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}	
+.button{
+	padding: 10px 60px 10px 60px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	background-color: #00b875;	
+	-webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+.button:hover{
+	background-color: #0d96d6; 
+}
+/*==============================Popup=================================*/
+.modal {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(100, 100, 100, 0.8);
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	-ms-transition: opacity 500ms;
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+.modal:target {
+	visibility: visible;
+	opacity: 1;
+}
+.modal > div {
+	position: relative;
+	margin: 10% auto;
+	padding: 25px;
+	background: #34495E;
+	color: white;
+	border-radius: 5px;
+	width: 40%;
+	height: 55%;
+	overflow: auto;
+}
+.modal a{
+	color: white;
+}
+.modal a:hover{
+	text-decoration: none;
+}
+
+/*==============================Stars=================================*/
+
+.fallingStar {
+    background: white;
+    position: absolute; 
+    /*Falling star*/
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;   
+}
+#right{	
+	width: 1px;
+    height: 5px;
+	-webkit-animation-name: fallRight;
+    animation-name: fallRight;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;   
+    /* Rotate star*/
+    -ms-transform: rotate(-65deg); 
+    -webkit-transform: rotate(-65deg); 
+    transform: rotate(-65deg);
+}
+#left{
+	width: 1px;
+    height: 7px;
+	-webkit-animation-name: fallLeft;
+    animation-name: fallLeft;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    /* Rotate star*/
+    -ms-transform: rotate(70deg); 
+    -webkit-transform: rotate(70deg); 
+    transform: rotate(70deg);
+}
+/*=======Fall Right==========*/
+@-webkit-keyframes fallRight {
+    0% {left:65%; top:30px;}
+    100% {left:98%; top:200px;}
+
+}
+@keyframes fallRight {
+    0% {left:65%; top:30px;}
+    100% {left:98%; top:200px;}
+}
+/*=========Fall Left========*/
+@-webkit-keyframes fallLeft {
+    0% {left:40%; top:20px;}
+    100% {left:2%; top:150px;}
+
+}
+@keyframes fallLeft {
+    0% {left:40%; top:20px;}
+    100% {left:2%; top:150px;}
+}

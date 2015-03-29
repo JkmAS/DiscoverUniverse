@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Metadata -->
+		<meta charset="UTF-8" />
+		<meta name="description" content="Discover the universe is a simple game. The aim of this game is to get the rocket into space. The game is based on a HTML Canvas and JavaScript."/>
+		<meta name="keywords" content="Game, rocket, space, universe, canvas, html, discover the universe"/>
+		<meta name="author" content="JkmAS"/>
+		<!-- Title -->
+		<title>Discover the universe</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<!-- JavaScript -->
+		<script src="game.js"></script>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<!-- Font -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+	</head>
+	<body>	
+		<!-- GitHub -->
+		<a href="https://github.com/JkmAS/DiscoverUniverse"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>		
+		
+		<div class="fallingStar" id="right"></div>
+		<div class="fallingStar" id="left"></div>
+		<canvas id="game" width="800" height="400">
+			Upps, your browser does not support the HTML5 canvas tag :(.
+		</canvas>
+		<div class="buttonGroup">
+			<a href="" class="button">New game</a>
+			<a href="#manual" class="button">Manual</a>
+		</div>
+		
+		<div id="manual" class="modal">
+			<div>
+				<h2>Manual - Discover the universe</h2>
+				<h3>About game</h3>
+				<p>Discover the universe is a simple web game. The aim of this game is to get the rocket into space and launch the first satellite. The game is based on a HTML Canvas and JavaScript.</p>
+				<h3>Danger</h3>
+				<p>Flight through cloud can damage the cover of rocket. Storm clouds damaging especially electronics. Conflict with meteorites greatly harms the rocket. It is necessary to keep the racket in the field of view, otherwise you lose the connection with the racket.</p>
+				<h3>Control</h3>
+				<p>The rocket is controlled by arrows. All other information is displayed in the info panel. Here you can find an indication of damage, speed, height and console.</p>
+				<h3>Author</h3>
+				<p>More information about me on <a href="http://www.jkmas.cz">my website</a> or <a href="https://about.me/jkmas">about.me</a>.</p>
+				<a href="#" class="button right">Close</a>
+			</div>
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="javascript.js"></script>
+	</body>
+</html>
