@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	var cloud = {};	
 	for (i=0; i<=numberObjects; i++){		
-		randomType = Math.floor((Math.random() * 3) + 0);
+		randomType = Math.floor(Math.random() * 3);
 		types = ["small", "big", "storm"];
 		cloud[i] = {
 			//only in canvas width
 			x : Math.floor((Math.random() * background.maxX) + background.minX),
 			//only (400,1600)
-			y : Math.floor((Math.random() * -1600) + 0),
+			y : Math.floor(Math.random() * -1600),
 			type: types[randomType]
 		};
 	}	
 
 	var meteorite = {};
 	for (i=0; i<=numberObjects; i++){		
-		randomType = Math.floor((Math.random() * 2) + 0);
+		randomType = Math.floor(Math.random() * 2);
 		types = ["small", "big"];
 		meteorite[i] = {
 			//only in canvas width
@@ -77,14 +77,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				
 	for (var i = 0; i <= imgNames.length-1; i++){		
 		img[imgNames[i]] = new Image();
-		var loadImages = [];
-		img[imgNames[i]].onload = function(){
-			loadImages[i] = true;
-		};
-		if (loadImages[i] == false){
-			console.log("[WARNING] The image "+imgNames[i]+" is not loaded");
-			break;
-		}
 		img[imgNames[i]].src = 'images/'+imgNames[i]+".png";	
 	}		
 	
@@ -376,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Cross-browser support for requestAnimationFrame
 	var w = window;
-	requestAnimationFrame = w.requestAnimationFrame || 
+	var requestAnimationFrame = w.requestAnimationFrame ||
 							w.webkitRequestAnimationFrame || 
 							w.msRequestAnimationFrame || 
 							w.mozRequestAnimationFrame;
